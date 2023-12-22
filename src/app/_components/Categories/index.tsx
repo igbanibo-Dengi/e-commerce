@@ -12,10 +12,10 @@ const Categories = ({ categories }: { categories: Category[] }) => {
         <Link href="/proucts">Show All</Link>
       </div>
 
-      <div className={classes.lis}>
-        {categories.map(category => (
-          <CategoryCard key={category.id} category={category} />
-        ))}
+      <div className={classes.list}>
+        {categories.map(category => {
+          return <CategoryCard key={category.id} category={category} />
+        })}
       </div>
     </section>
   )
